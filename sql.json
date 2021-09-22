@@ -1,0 +1,12 @@
+{
+    "client": "",
+    "interfaceNameFormat": "I${table}",
+    "folder": "./db/",
+    "connection": {
+        "user": "",
+        "password": "",
+        "server": "",
+        "database": "",
+        "port": 1433
+    }
+}

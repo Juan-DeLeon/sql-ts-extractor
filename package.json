@@ -1,0 +1,17 @@
+{
+  "name": "sql-ts",
+  "version": "1.0.0",
+  "main": "sql.json",
+  "scripts": {
+    "start": "@rmp135/sql-ts -c ./sql.json",
+    "test": "@rmp135/sql-ts"
+  },
+  "dependencies": {
+    "@rmp135/sql-ts": "^1.10.0",
+    "mssql": "^7.2.1"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
