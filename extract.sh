@@ -1,6 +1,6 @@
 #! /bin/bash
 # export db tables as interfaces
-npm install
+rm -rf db
 mkdir db
 
 npx @rmp135/sql-ts -c ./sql.json -o ./db
@@ -17,3 +17,8 @@ for file in ./db/export*; do
     FILENAME=$(head -n 1 $file | cut -d " " -f 3)
     mv $file ./db/$FILENAME.ts
 done
+
+rm ./db/Database.ts
+
+ls ./db > ./db/index.ts
+awk -i inplace -v RS=".ts\n" '{print "export { "$0" } from \"./"$0"\";" }' ./db/index.ts
