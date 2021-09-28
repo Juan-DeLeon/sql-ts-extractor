@@ -20,5 +20,8 @@ done
 
 rm ./db/Database.ts
 
+# lista de archivos a index.ts
 ls ./db > ./db/index.ts
+
+# export de ts para todas las interfaces
 awk -i inplace -v RS=".ts\n" '{print "export { "$0" } from \"./"$0"\";" }' ./db/index.ts
